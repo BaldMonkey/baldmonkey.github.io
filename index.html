@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#4a6fa5">
+    <title>我的收藏导航</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📍</text></svg>">
+</head>
+
+<body>
+    <header>
+        <h1><i class="fas fa-compass"></i> 我的收藏导航</h1>
+    </header>
+
+    <div class="container">
+        <div class="controls">
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="searchInput" placeholder="搜索收藏的网站..." autocomplete="off">
+                    <div class="search-engine-selector">
+                        <select id="searchEngine">
+                            <option value="google">Google</option>
+                            <option value="bing">Bing</option>
+                            <option value="baidu">Baidu</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="theme-selector">
+                <span>主题：</span>
+                <div class="theme-btn active" id="autoTheme" title="自动跟随系统"></div>
+                <div class="theme-btn" id="blueTheme" title="浅色主题"></div>
+                <div class="theme-btn" id="greenTheme" title="绿色主题"></div>
+                <div class="theme-btn" id="purpleTheme" title="紫色主题"></div>
+                <div class="theme-btn" id="darkTheme" title="深色主题"></div>
+            </div>
+        </div>
+
+        <div class="categories" id="categoriesContainer">
+            <button class="category-btn active" data-category="all">全部</button>
+            <!-- 分类按钮将通过JavaScript动态生成 -->
+        </div>
+
+        <div class="bookmarks-container" id="bookmarksContainer">
+            <!-- 书签内容将通过JavaScript动态生成 -->
+        </div>
+
+        <!--
+		<button class="add-bookmark-btn" id="addBookmarkBtn">
+            <i class="fas fa-plus"></i> 添加新收藏
+        </button>
+		-->
+    </div>
+
+    <!-- 添加右侧悬浮按钮 -->
+    <div class="floating-action-buttons">
+        <button class="fab-button" id="fabTop" title="返回顶部">
+			<i class="fas fa-arrow-up"></i>
+		</button>
+        <button class="fab-button" id="fabSearch" title="搜索">
+			<i class="fas fa-search"></i>
+		</button>
+        <!--
+		<button class="fab-button" id="fabTheme" title="主题">
+			<i class="fas fa-palette"></i>
+		</button>
+		-->
+    </div>
+
+    <footer>
+        <p>© <span id="currentYear"></span> 个人导航页面&nbsp;&nbsp;|&nbsp;&nbsp;共收藏了 <span id="totalCount">0</span> 个网站</p>
+        <!--
+        <p>数据存储在本地浏览器中，清空浏览器数据会丢失收藏</p>
+		-->
+    </footer>
+
+    <!-- 添加/编辑书签模态框 -->
+    <div class="modal" id="bookmarkModal">
+        <div class="modal-content">
+            <h3 id="modalTitle">添加新收藏</h3>
+            <form id="bookmarkForm">
+                <div class="form-group">
+                    <label for="bookmarkName">网站名称</label>
+                    <input type="text" id="bookmarkName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookmarkUrl">网站地址</label>
+                    <input type="url" id="bookmarkUrl" class="form-control" required placeholder="https://example.com">
+                </div>
+                <div class="form-group">
+                    <label for="bookmarkCategory">分类</label>
+                    <select id="bookmarkCategory" class="form-control" required>
+                        <option value="">选择分类</option>
+                        <!-- 分类选项将通过JavaScript动态生成 -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bookmarkDescription">描述 (可选)</label>
+                    <textarea id="bookmarkDescription" class="form-control" rows="3" placeholder="网站简要描述..."></textarea>
+                </div>
+                <div class="modal-buttons">
+                    <button type="button" class="btn btn-secondary" id="cancelBtn">取消</button>
+                    <button type="submit" class="btn btn-primary" id="saveBtn">保存</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- bookmark data -->
+    <script src="./js/bookmark-data.js"></script>
+    <!-- main script file -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
