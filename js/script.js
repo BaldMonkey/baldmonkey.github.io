@@ -269,8 +269,9 @@ function generateBookmarks() {
                             // 获取网站favicon
                             let faviconUrl = '';
                             try {
-                                const url = new URL(bookmark.url);
-                                faviconUrl = `https://www.google.com/s2/favicons?domain=${url.hostname}&sz=64`;
+                                // const url = new URL(bookmark.url);
+                                // faviconUrl = `https://www.google.com/s2/favicons?domain=${url.hostname}&sz=64`;
+                                faviconUrl = `./img/${bookmark.id}.png`;
                             } catch {
                                 faviconUrl = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzRBNjdBNSI+PHBhdGggZD0iTTEyIDJDNi40OCAyIDIgNi40OCAyIDEyczQuNDggMTAgMTAgMTAgMTAtNC40OCAxMC0xMFMxNy41MiAyIDEyIDJ6bS0xIDE1bC01LTUgMS40MS0xLjQxTDEwIDE0LjE3bDYuNTktNi41OUwxOCA5bC04IDh6Ii8+PC9zdmc+';
                             }
