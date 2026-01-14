@@ -1,5 +1,5 @@
 // 从localStorage加载书签或使用默认数据
-let bookmarks = JSON.parse(localStorage.getItem('personalBookmarks')) || defaultBookmarks;
+let bookmarks = JSON.parse(localStorage.getItem('personalBookmarks') || defaultBookmarks);
 
 // 当前选中的分类
 let currentCategory = 'all';
