@@ -155,7 +155,7 @@ const defaultBookmarks = `[
   {
     "id": 20,
     "name": "HIFINI",
-    "url": "https://hifiti.com.",
+    "url": "https://hifiti.com",
     "category": "音乐",
     "description": "音乐发烧友社区",
     "clicks": 0
@@ -294,6 +294,14 @@ const defaultBookmarks = `[
     "url": "https://dash.cloudflare.com",
     "category": "运维",
     "description": "Cloudflare管理面板",
+    "clicks": 0
+  },
+  {
+    "id": 38,
+    "name": "码工具",
+    "url": "https://www.matools.com",
+    "category": "工具",
+    "description": "代码在线工具箱",
     "clicks": 0
   }
 ]`;
