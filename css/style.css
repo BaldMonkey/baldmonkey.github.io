@@ -2,6 +2,7 @@
     --primary-color: #4a6fa5;
     --secondary-color: #6b8cbc;
     --background-color: #f5f7fa;
+	--background-grid-color: #e0e0e0;
     --card-color: #ffffff;
     --text-color: #333333;
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -24,6 +25,7 @@
         --primary-color: #6b8cbc;
         --secondary-color: #8aa7d6;
         --background-color: #1a1a1a;
+		--background-grid-color: #2d2d2d;
         --card-color: #2d2d2d;
         --text-color: #f0f0f0;
         --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -75,8 +77,8 @@
 
 body {
     background-color: var(--background-color);
-    background-image: linear-gradient(to right, #e0e0e0 1px, transparent 1px),
-						linear-gradient(to bottom, #e0e0e0 1px, transparent 1px);
+	background-image: linear-gradient(to right, var(--background-grid-color) 1px, transparent 1px),
+						linear-gradient(to bottom, var(--background-grid-color) 1px, transparent 1px);
 	background-size: 20px 20px; /* 控制网格大小 */
     color: var(--text-color);
     line-height: 1.6;
